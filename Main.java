@@ -8,7 +8,17 @@ public class Main
     public static void main(String[] args)
     {
         
-        int[] arr = {5,3,1,-2,4};
+//        int[] arr = {5,3,1,-2,4};
+        
+        int[] arr = new int[30];
+
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(i % 2 == 0)
+                arr[i] = (int)(Math.random() * i *i + i + i);
+            
+            arr[i] += ((int)(Math.random() * Math.pow(i, 2) + i));
+        }
 
         print(arr, "Before");
         
